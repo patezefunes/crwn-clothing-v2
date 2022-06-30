@@ -22,16 +22,11 @@ import {
   getDocs,
   QueryDocumentSnapshot,
 } from "firebase/firestore";
+import { firebaseCredentials } from "../../consts/firebaseCredentials";
 import { Category } from "../../store/categories/categories.types";
 
-const firebaseConfig = {
-  apiKey: "AIzaSyBjJZ49mhgfak-dlWABPXlG-V-DFEXp_I4",
-  authDomain: "shop-853b2.firebaseapp.com",
-  projectId: "shop-853b2",
-  storageBucket: "shop-853b2.appspot.com",
-  messagingSenderId: "831382562841",
-  appId: "1:831382562841:web:4cc47f58da38c3b4dce288",
-};
+  //Put your Firebase API credentials here
+const firebaseConfig = firebaseCredentials;
 
 const firebaseApp = initializeApp(firebaseConfig);
 

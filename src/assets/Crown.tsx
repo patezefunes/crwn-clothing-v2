@@ -1,4 +1,6 @@
-const Crown = () => {
+import { FC } from "react";
+
+const Crown: FC = () => {
   return (
     <svg
       width="50px"

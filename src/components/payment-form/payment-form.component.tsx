@@ -1,7 +1,8 @@
+import { FC } from "react";
 import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
 import { FormContainer, PaymentFormContainer } from "./payment-form.styles";
 
-const PaymentForm = () => {
+const PaymentForm: FC = () => {
   return (
     <PaymentFormContainer>
       <FormContainer onSubmit={()=> alert('Payment Sent')}>

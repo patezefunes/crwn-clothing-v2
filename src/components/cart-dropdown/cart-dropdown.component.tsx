@@ -1,3 +1,4 @@
+import { FC } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { selectCartItems } from "../../store/cart/cart.selector";
@@ -11,7 +12,7 @@ import {
   CartItems,
 } from "./cart-dropdown.styles";
 
-const CartDropdown = () => {
+const CartDropdown: FC = () => {
   const navigate = useNavigate();
   const cartItems = useSelector(selectCartItems);
   const goToCheckoutHandler = () => {

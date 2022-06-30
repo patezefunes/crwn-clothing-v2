@@ -13,18 +13,18 @@ import {
 import { CategoryContainer, Title } from "./category.styles";
 
 const Category = () => {
-  const { category } = useParams();
+  const { category } = useParams<string>();
   const isLoading = useSelector(selectCategoriesIsLoading);
   const categoriesMap = useSelector(selectCategoriesMap);
-  const [products, setProducts] = useState(categoriesMap[category]);
+  const [products, setProducts] = useState(categoriesMap[category as string]);
 
   useEffect(() => {
-    setProducts(categoriesMap[category]);
+    setProducts(categoriesMap[category as string]);
   }, [category, categoriesMap]);
 
   return (
     <Fragment>
-      <Title>{category.toUpperCase()}</Title>
+      <Title>{category!.toUpperCase()}</Title>
       {isLoading ? (
         <Spinner />
       ) : (
